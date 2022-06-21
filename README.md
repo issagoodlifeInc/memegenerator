@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# MemeGenerator Section 3 Project {React Course, Scrimba}
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [MemeGenerator project Section 3 React Course](https://scrimba.com/learn/learnreact/meme-generator-header-cocf84c4c9121d91a0095f3e9).
+The course is offered for FREE on Scrimba by Bob Ziroll [Learn React](https://scrimba.com/learn/learnreact)(An amazing tutor -- really understood his course)
 
-## Available Scripts
+I decided to show my travel experience in Watamu, Kenya. I visited this place after completing my 4th Year studies in Uni
 
-In the project directory, you can run:
+## Table of contents
 
-### `npm start`
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author) -[Acknowledgments](#acknowledgments)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The challenge
 
-### `npm test`
+Recreate the memegenerator site from the figma file shared
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Requirements : -
 
-### `npm run build`
+- Recreate the memegenerator site as per the figma design
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Screenshot
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Screenshot of the Meme Generator mock up
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![](./src/images/screenshot.jpg)
 
-### `npm run eject`
+### Links
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Solution URL: [GitHub Link](https://github.com/issagoodlifeInc/memegenerator.git)
+- Live Site URL: [Netlify Deploy](https://Memeleskim.netlify.app/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## My process
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Recreated the design as per [Figma](https://www.figma.com/file/MoLwFPHNHJVrzdFurxHzNV/Meme-Generator?node-id=0%3A1)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Started with the mockup -- deleteting unrequired files and adding the `component` and `images` files to the structure after `create-react-app`
 
-## Learn More
+3. Started with the `Navbar` section using a container to set `max-width`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Then the `Main` section with the `inputs`, `button`, and `Meme Image`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Writing out this `README.md` file
 
-### Code Splitting
+### Built with
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- React
+- JSX syntax
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
 
-### Analyzing the Bundle Size
+### What I learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Using Figma files to code
 
-### Making a Progressive Web App
+- React! React! React!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Continued development
 
-### Advanced Configuration
+- Learning more React! (yeah reenacting React problems and tackling them)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Better turnaround time -- simple stuff but worked on it for a while
 
-### Deployment
+- Less Code (code cleanup)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Author
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Website - [Lesley Kimutai](https://leskim.github.io/myweb/)
+- Frontend Mentor - [Frontend Mentor](https://www.frontendmentor.io/profile/Leskim)
