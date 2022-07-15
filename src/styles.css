@@ -12,7 +12,7 @@ font-family: 'Karla', sans-serif;
 
 body {
   margin: 0;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 400;
 }
 
@@ -24,8 +24,8 @@ body {
 
 .nav-bg,
 .btn {
-  background: linear-gradient(90deg, #672280, 1.18%, #A626D3 100%);
-  color: #FFFFFF;
+  background: linear-gradient(90deg, #672280, 1.18%, #a626d3 100%);
+  color: #ffffff;
 }
 
 .nav,
@@ -73,21 +73,21 @@ body {
   width: 48%;
   border-radius: 5px;
   font-size: 12px;
-  padding: .5rem;
-  border: 1px solid #E5E5E5;
-  color: #0D0D0D;
+  padding: 0.5rem;
+  border: 1px solid #e5e5e5;
+  color: #0d0d0d;
 }
 
 input:focus,
 input:hover {
   outline: 0;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
 }
 
 .btn {
   width: 100%;
   border-radius: 5px;
-  padding: .7rem;
+  padding: 0.7rem;
   border: none;
   margin: 1.2rem 0;
   font-weight: 700;
@@ -95,13 +95,19 @@ input:hover {
   font-size: 1rem;
   letter-spacing: -0.1em;
   line-height: 19px;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background: #A626D3;
+  background: #a626d3;
 }
 
 .main-img img {
   width: 100%;
   border-radius: 2px;
+}
+
+.meme--img {
+  border-radius: 5px;
+  width: 550px;
 }
