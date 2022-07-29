@@ -1,5 +1,5 @@
 import React from "react";
-import memeDefault from "../images/memeimg.png";
+// import memeDefault from "../images/memeimg.png";
 import memes from "../memesData";
 
 function Main() {
@@ -11,12 +11,13 @@ function Main() {
     randomImg: "https://i.imgflip.com/1g8my4.jpg",
   });
 
-  const allMemeImages = React.useState(memes);
-  // console.log(allMemeImages);
+  const [allMemeImages, setAllMemeImages] = React.useState(memes);
 
   function getImg() {
     let meme =
-      memes.data.memes[Math.floor(Math.random() * memes.data.memes.length)];
+      allMemeImages.data.memes[
+        Math.floor(Math.random() * allMemeImages.data.memes.length)
+      ];
     let memeUrl = meme.url;
 
     setMeme((prevMeme) => {
@@ -40,10 +41,12 @@ function Main() {
       </button>
 
       <div className="main-img">
-        <img src={memeDefault} alt="Meme" />
+        <img src={meme.randomImg} alt="Meme" />
+        <h2 className="meme--text top">One Of us</h2>
+        <h2 className="meme--text bottom">Down here</h2>
       </div>
 
-      <img className="meme--img" src={meme.randomImg} alt="" />
+      {/* <img className="meme--img" src={meme.randomImg} alt="" /> */}
     </main>
   );
 }

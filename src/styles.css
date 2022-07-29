@@ -107,7 +107,31 @@ input:hover {
   border-radius: 2px;
 }
 
-.meme--img {
+.main-img {
+  position: relative;
   border-radius: 5px;
   width: 550px;
+}
+
+.main-img .meme--text {
+  position: absolute;
+  text-transform: uppercase;
+  color: #ffffff;
+  /* text-align: center; */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+  letter-spacing: 1px;
+}
+
+.top {
+  top: 1rem;
+}
+
+.bottom {
+  bottom: 1rem;
 }
