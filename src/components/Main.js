@@ -26,15 +26,33 @@ function Main() {
         randomImg: memeUrl,
       };
     });
-
-    // console.log(memeUrl);
   }
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      [name]: value,
+    }));
+  };
 
   return (
     <main className="container section">
       <div className="inputs">
-        <input type="text" placeholder="Shut up" />
-        <input type="text" placeholder="and take my money" />
+        <input
+          type="text"
+          placeholder="Shut up"
+          value={meme.topText}
+          name="topText"
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          placeholder="and take my money"
+          value={meme.bottomText}
+          name="bottomText"
+          onChange={handleChange}
+        />
       </div>
       <button onClick={getImg} className="btn">
         Get a new meme image🖼
@@ -42,8 +60,8 @@ function Main() {
 
       <div className="main-img">
         <img src={meme.randomImg} alt="Meme" />
-        <h2 className="meme--text top">One Of us</h2>
-        <h2 className="meme--text bottom">Down here</h2>
+        <h2 className="meme--text top">{meme.topText}</h2>
+        <h2 className="meme--text bottom">{meme.bottomText}</h2>
       </div>
 
       {/* <img className="meme--img" src={meme.randomImg} alt="" /> */}
