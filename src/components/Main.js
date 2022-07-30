@@ -1,6 +1,6 @@
 import React from "react";
 // import memeDefault from "../images/memeimg.png";
-import memes from "../memesData";
+// import memes from "../memesData";
 
 function Main() {
   //   console.log(memes.data.memes[Math.floor(Math.random()* 100)]);
@@ -11,13 +11,26 @@ function Main() {
     randomImg: "https://i.imgflip.com/1g8my4.jpg",
   });
 
-  const [allMemeImages, setAllMemeImages] = React.useState(memes);
+  const [allMeme, setAllMeme] = React.useState();
+
+  React.useEffect(() => {
+    // Using fetch
+    // fetch("https://api.imgflip.com/get_memes")
+    //   .then((response) => response.json())
+    //   .then((data) => setAllMeme(data.data.memes));
+
+    // Using async function
+    async function geteMemes() {
+      const res = await fetch("https://api.imgflip.com/get_memes");
+      const data = await res.json();
+      setAllMeme(data.data.memes);
+    }
+
+    geteMemes();
+  }, []);
 
   function getImg() {
-    let meme =
-      allMemeImages.data.memes[
-        Math.floor(Math.random() * allMemeImages.data.memes.length)
-      ];
+    let meme = allMeme[Math.floor(Math.random() * allMeme.length)];
     let memeUrl = meme.url;
 
     setMeme((prevMeme) => {

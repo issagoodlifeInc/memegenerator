@@ -62,6 +62,80 @@ Screenshot of the Meme Generator mock up
 
 - Using Figma files to code
 
+- ##### Learnt Taking in Form inputs using state to get the data
+
+```JSX
+// State
+ const [meme, setMeme] = React.useState({
+    topText: "",
+    bottomText: "",
+    randomImg: "https://i.imgflip.com/1g8my4.jpg",
+  });
+
+  // Handlechange changes the state on every keystroke for inputs ond changes on checkboxes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      [name]: value,
+    }));
+  };
+
+  // Nifty trick
+  // [name]: type === checkbox ? checked : value
+
+// The input part
+//  the name must be ==== to the object value in state
+// the value === its value in state (controlled inputs or smthin)
+  <input
+          type="text"
+          placeholder="Shut up"
+          value={meme.topText}
+          name="topText"
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          placeholder="and take my money"
+          value={meme.bottomText}
+          name="bottomText"
+          onChange={handleChange}
+        />
+```
+
+- ##### Learning useEffect and Fetching data using fetch()
+
+```JSX
+React.useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+      .then((response) => response.json())
+      .then((data) => setAllMeme(data.data.memes));
+  }, []);
+
+  // the [] takes in a dependancy array that will rerun useEffect if the array changes ... [] for a blank it just runs once when the page renders
+
+```
+
+- learnt about cleaning up with useEffect (return a function for clean up)
+<!-- Used an example of the resizing of the window to toglle a window tracker -->
+
+```JSX
+React.useEffect(() => {
+        function watchWidth() {
+            console.log("Setting up...")
+            setWindowWidth(window.innerWidth)
+        }
+
+        window.addEventListener("resize", watchWidth)
+  // Clean up function to get rid of the memory leak warning
+        return function() {
+            console.log("Cleaning up...")
+            window.removeEventListener("resize", watchWidth)
+        }
+    }, [])
+```
+
 - React! React! React!
 
 ### Continued development
